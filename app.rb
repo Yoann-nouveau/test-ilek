@@ -11,21 +11,18 @@ def calculation
     def years_calculation
       @number_of_years = @input/@seconds_in_year.to_f
       @total_years = @input/@seconds_in_year
-      # puts "#{@total_years} Années"
     end
 
     def days_calculation
       @days = @number_of_years-@total_years
       @number_of_days = (@days * @seconds_in_year)/@seconds_in_day
       @total_days = @number_of_days.to_i
-      # puts "#{@total_days} Jours"
     end
 
     def hours_calculation
       @hours = @number_of_days -@total_days
       @number_of_hours = (@hours * @seconds_in_day)/@seconds_in_hour
       @total_hours = @number_of_hours.to_i
-      # puts "#{@total_hours} Heures"
     end
 
 
@@ -33,12 +30,10 @@ def calculation
       @minutes = @number_of_hours - @total_hours
       @number_of_minutes = (@minutes * @seconds_in_hour)/@seconds_in_minute
       @total_minutes = @number_of_minutes.to_i
-      # puts "#{total_minutes} Minutes"
     end
 
     def seconds_calculation
       seconds = ((@number_of_minutes-@total_minutes)*60).to_i
-      # puts "#{seconds} Secondes"
     end
 
     display_years = "#{years_calculation} years"
